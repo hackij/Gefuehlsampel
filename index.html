@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#101820">
+    <meta name="description" content="Gefühlsampel für den Berufsschulunterricht: Stimmung auswählen und groß anzeigen.">
+    <title>Gefühlsampel</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app" id="app">
+      <section class="picker-view" aria-labelledby="app-title">
+        <div class="intro">
+          <p class="eyebrow">Berufsschulunterricht</p>
+          <h1 id="app-title">Gefühlsampel</h1>
+          <p class="hint">Wähle deine Stimmung. Danach erscheint sie groß auf dem Display.</p>
+        </div>
+
+        <div class="mood-grid" aria-label="Stimmung auswaehlen">
+          <button class="mood-card happy" type="button" data-mood="happy">
+            <span class="emoji" aria-hidden="true">😊</span>
+            <span class="label">Fröhlich</span>
+          </button>
+          <button class="mood-card tired" type="button" data-mood="tired">
+            <span class="emoji" aria-hidden="true">😴</span>
+            <span class="label">Müde</span>
+          </button>
+          <button class="mood-card bored" type="button" data-mood="bored">
+            <span class="emoji" aria-hidden="true">😐</span>
+            <span class="label">Gelangweilt</span>
+          </button>
+          <button class="mood-card stressed" type="button" data-mood="stressed">
+            <span class="emoji" aria-hidden="true">😵‍💫</span>
+            <span class="label">Gestresst</span>
+          </button>
+          <button class="mood-card okay" type="button" data-mood="okay">
+            <span class="emoji" aria-hidden="true">🙂</span>
+            <span class="label">Geht so</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="display-view" aria-live="polite" hidden>
+        <button class="back-button" type="button" aria-label="Zurück zur Auswahl">Auswahl ändern</button>
+        <div class="display-content">
+          <div class="display-emoji" id="display-emoji" aria-hidden="true">😊</div>
+          <div class="display-label" id="display-label">Fröhlich</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
